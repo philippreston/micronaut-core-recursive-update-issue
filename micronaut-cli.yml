@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: micronaut.core.recursive.update.issue
+---
+testFramework: spock
+sourceLanguage: java
