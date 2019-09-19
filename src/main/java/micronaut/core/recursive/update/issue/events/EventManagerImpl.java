@@ -10,7 +10,7 @@ public class EventManagerImpl implements EventManager {
         this.serviceName = serviceName;
     }
     
-    public void register(MongoCollection collection, String id) {
+    public void register(String id) {
 
     }
 }

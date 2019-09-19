@@ -16,9 +16,6 @@ class ExampleRepoImplTest extends Specification {
     ExampleRepo exampleRepo
 
     @Inject
-    MongoClient mongoClient
-
-    @Inject
     EventManager eventManager
 
     def "find"() {

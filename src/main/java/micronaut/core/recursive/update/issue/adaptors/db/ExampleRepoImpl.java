@@ -14,24 +14,17 @@ import javax.inject.Singleton;
 public class ExampleRepoImpl implements ExampleRepo {
 
     @Inject
-    MongoClient mongoClient;
-
-    @Inject
     EventManager eventManager;
 
     @PostConstruct
     public void init() {
-        eventManager.register(collection(), "test");
+        eventManager.register("test");
     }
 
     @Override
     public Mono<Example> find() {
-        return Flux.from(collection().find()).singleOrEmpty();
+        return Mono.empty();
     }
 
-    private MongoCollection<Example> collection() {
-        return mongoClient.getDatabase("micronaut-core-recursive-update-issue")
-                          .getCollection("example", Example.class);
-    }
 
 }
